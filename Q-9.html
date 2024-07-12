@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>
+        Integers between 0 to 30 sum of = <span id="ans"></span>
+    </h2>
+    
+
+    <script>
+        let r=0;
+        let ans=0;
+
+        do{
+            ans += r;
+            r++;
+        }while(r<=30);
+
+        document.getElementById('ans').innerHTML = ans;
+    </script>
+</body>
+</html>

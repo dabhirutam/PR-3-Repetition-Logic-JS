@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="ans"></h2>
+
+
+    <script>
+        let r = 1;
+        let ans = '';
+
+        do {
+            if (r % 3 == 0 && r % 5 == 0) {
+                ans +=r + ' = ' + 'FizzBuzz' + '<br/>';
+            }else if (r % 5 == 0) {
+                ans +=r + ' = ' + 'Buzz' + '<br/>';
+            }else if (r % 3 == 0) {
+                ans +=r + ' = ' + 'Fizz' + '<br/>';
+            }else{
+                ans +=r + ' = ' + '--' + '<br/>';
+            }
+            r++;
+        } while (r <= 100);
+
+        document.getElementById('ans').innerHTML = ans;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>
+        <span id="no"></span><span id="ans"></span>
+    </h2>
+
+    <script>
+
+        let no = prompt("Enter the number :- ");
+        let length = no.length;
+        let r = 0;
+        let ptable1 = '';
+        let ptable2 = '';
+        let ans;
+
+        while (r < length) {
+            ptable1 += no[r];
+            ptable2 += no[(length - 1) - r];
+            r++;
+        };
+
+        if (ptable1 == ptable2) {
+            ans = ' is Palindrome';
+        } else {
+            ans = ' is not Palindrome'
+        }
+
+        document.getElementById('no').innerHTML = no;
+        document.getElementById('ans').innerHTML = ans;
+
+    </script>
+</body>
+
+</html>

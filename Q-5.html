@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>
+        Fibonacci Series of the number <span id="no"></span>
+        <br/><br/>
+        <span id="fs"></span>
+    </h2>
+    
+
+    <script>
+        
+        let no = parseInt(prompt("Enter the number :- "));
+        let r=1,n1=0,n2=1,n3;
+        let ptable="";
+
+        while(r<=no){
+            ptable += "Adding " + n1 + " And " + n2 + " = " + (n1 + n2) + "<br/>";
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+            r++;
+        };
+
+        document.getElementById('no').innerHTML = no;
+        document.getElementById('fs').innerHTML = ptable;
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="pattern"></h2>
+    
+
+    <script>
+        let pattern='';
+        let n=1;
+
+        for(let r=1; r<=5; r++){
+            for(let s=5; s>r; s--){
+                pattern += '&nbsp;&nbsp;';
+            }
+
+            for(let c=5; c>=(6-r); c--, n++){
+                pattern += n + '&nbsp;&nbsp;';
+            }
+            pattern += '<br/><br/>';
+        }        
+
+        document.getElementById('pattern').innerHTML = pattern;
+    </script>
+</body>
+</html>
