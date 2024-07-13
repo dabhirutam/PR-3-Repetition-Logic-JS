@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="pn"></h2>
+
+
+    <script>
+
+        let no = parseInt(prompt("Enter the number :- "));
+        let r = 2;
+        let ans = 0;
+
+        while (r <= no) {
+            if(no%r==0 && r!=no){
+                ans = 1;
+            }
+            r++;
+        };
+        if(ans == 1){
+            document.getElementById('pn').innerHTML = no + ' is not prime number';
+        }else{
+            document.getElementById('pn').innerHTML = no + ' is prime number';
+        }
+
+    </script>
+</body>
+
+</html>

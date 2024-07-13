@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>
+        <span id="dn"></span>
+        <span id="sum"></span>
+        <br/>
+        <span id="no"></span>
+    </h2>
+
+    <script>
+
+        let no = prompt("Enter the number :- ");
+        let r = 0, sum = 0, mul = 0;
+        let ans = '';
+
+        while (r < no.length) {
+            mul = no[r] * 1;
+            if (r >= 1) {
+                mul = no[r] * no[r];
+                for (let n = 1; n < r; n++) {
+                    mul = mul * no[r];
+                }
+            }
+            sum += mul;
+            ans += no[r] + ' ^ ' + (r+1) + ' = ' + mul + '<br/>';
+            r++;
+        };
+        if (no == sum) {
+            document.getElementById('no').innerHTML = no + ' is Disarium number because ' + no + ' = ' + sum;
+        } else {
+            document.getElementById('no').innerHTML = no + ' is not Disarium number because ' + no + ' != ' + sum;
+        }
+
+        document.getElementById('dn').innerHTML = ans;
+        document.getElementById('sum').innerHTML = 'sum of = ' + sum;
+    </script>
+</body>
+
+</html>

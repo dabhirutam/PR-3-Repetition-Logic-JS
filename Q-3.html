@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>
+        <span id="an"></span>
+        <span id="sum"></span>
+        <br />
+        <span id="no"></span>
+    </h2>
+
+    <script>
+
+        let no = prompt("Enter the number :- ");
+        let r = 0, sum = 0, mul = 0;
+        let ans = '';
+
+        while (r < no.length) {
+            mul = no[r] * no[r];
+            for (let n = 2; n < no.length; n++) {
+                mul = mul * no[r];
+            }
+            sum += mul;
+            ans += no[r] + ' ^ ' + no.length + ' = ' + mul + '<br/>';
+            r++;
+        };
+        if (no == sum) {
+            document.getElementById('no').innerHTML = no + ' is Armstrong number because ' + no + ' = ' + sum;
+        } else {
+            document.getElementById('no').innerHTML = no + ' is not Armstrong number because ' + no + ' != ' + sum;
+        }
+
+        document.getElementById('an').innerHTML = ans;
+        document.getElementById('sum').innerHTML = 'sum of = ' + sum;
+    </script>
+</body>
+
+</html>
